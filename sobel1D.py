@@ -4,9 +4,8 @@ import matplotlib.pyplot as plt
 
 def sobel1D(img):
     """
-    Function convolves an image with 1-D version
-    of Sobel kernel. Pixels at borders set to black.
-
+    Function convolves an image with 1-D version of Sobel kernel. Pixels at borders set to black.
+    
     Input: 2-D array of an image with 1 channel
     Output 2-D convolved array
     """
@@ -75,7 +74,7 @@ if __name__ == "__main__":
 
     #import image
     inputImg=inputImg1=Image.open(pth1)
-    img=np.array(inputImg1.convert("L"),dtype=np.uint8)
+    img=np.array(inputImg1.convert("L"),dtype=np.uint8) #Convert image to grayscale and numpy array
 
     #Convolve image with 1D kernel
     gx1D,gy1D=sobel1D(img)
