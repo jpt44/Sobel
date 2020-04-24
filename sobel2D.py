@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 
 def sobel2D(img):
     """
-    Function convolves an image with 2-D version
-    of Sobel kernel. Pixels at borders set to black
+    Function convolves an image with 2-D version of Sobel kernel. Pixels at borders set to black
 
     Input: 2-D array of an image with 1 channel
     Output 2-D convolved array
@@ -19,11 +18,7 @@ def sobel2D(img):
     ], dtype=np.int32)
 
     # Sobel kernel for vertical gradient
-    sobel2Dy = np.array([
-        [1, 2, 1],
-        [0, 0, 0],
-        [-1, -2, -1]
-    ], dtype=np.int32)
+    sobel2Dy = sobel2Dx.T
 
     # Flip sobel kernel along x and y axes for convolution
     sobel2Dx = np.flip(sobel2Dx, axis=[0, 1])
@@ -56,11 +51,11 @@ def sobel2D(img):
 
 if __name__ == "__main__":
     # Image path + name
-    pth1 = "D:\College\Masters\Spring-2020-21\CS583\HW1\\example-input.jpg"
+    pth1 = ""
 
     # import image
     inputImg = inputImg1 = Image.open(pth1)
-    img = np.array(inputImg1.convert("L"), dtype=np.uint8)
+    img = np.array(inputImg1.convert("L"), dtype=np.uint8) #Convert image to grayscale and numpy array
 
     # Convolve image with 2D kernel
     gx2D, gy2D = sobel2D(img)
