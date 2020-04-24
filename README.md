@@ -4,7 +4,7 @@ The project has Python 3.6 implementations of the 2-D and 1-D Sobel operators in
 The goal of the project was to perform manual convolution so users can better understand the mechanics of the Sobel operator.
 
 ## Important
-Users wishing to use the sobel2d.py and sobel1d.py files must provide the path to their image in the 'pth' variable. 
+Users wishing to use the sobel2d.py and sobel1d.py files must provide the path to their image in the 'pth1' variable. 
 
 ## Required Libraries
 To run the sobel2d.py and sobel1d.py files, the following libraries must be installed:
