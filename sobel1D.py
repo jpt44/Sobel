@@ -71,7 +71,7 @@ def sobel1D(img):
 if __name__ == "__main__":
 
     #Image path + name
-    pth1="D:\College\Masters\Spring-2020-21\CS583\HW1\\example-input.jpg"
+    pth1=""
 
     #import image
     inputImg=inputImg1=Image.open(pth1)
